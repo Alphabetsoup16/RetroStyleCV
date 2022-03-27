@@ -54,7 +54,7 @@ Array(55).fill().map(() => buildMeshWithRandomPositionAndRotation(new THREE.Dode
 
 
 const textureLoader = new THREE.TextureLoader();
-const normalTexture = textureLoader.load('/normal-map.png');
+const normalTexture = textureLoader.load('./normal-map.png');
 const texturedWhite = new THREE.MeshStandardMaterial({
   color: 0xFFFFFF,
   metalness: 0.7,
