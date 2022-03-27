@@ -26,7 +26,6 @@ const metallicWhite = new THREE.MeshStandardMaterial({
   color: 0xFFFFFF,
   metalness: 0.1,
   roughness: 0.2,
-  shininess: 0.9,
   transparent: true,
   opacity: 0.7
 })
