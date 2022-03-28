@@ -80,7 +80,7 @@ function onWindowResize() {
 
   renderer.setSize( window.innerWidth, window.innerHeight );
 }
-
+window.addEventListener( 'resize', onWindowResize );
 animate();
 
 const moveCamera = () => {
