@@ -4,6 +4,11 @@
   left: 0;
 }
 
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 main {
   width: 100vw;
   position: absolute;
