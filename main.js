@@ -61,12 +61,12 @@ const AmbientOccultionTexture = textureLoader.load('/WeaveSteel_AmbientOccultion
 const MetallicTexture = textureLoader.load('/WeaveSteel_Metallic.png');
 const texturedSphere = new THREE.MeshStandardMaterial({
   map: BaseColorTexture,
-  metalness: 0.1,
-  roughnessMap: RoughnessTexture,
-  roughness: 0.5,
-  normalMap: normalTexture,
-  displacementMap: HeightMapTexture,
-  displacementScale: 0.05,
+  // metalness: 0.1,
+  // roughnessMap: RoughnessTexture,
+  // roughness: 0.5,
+  // normalMap: normalTexture,
+  // displacementMap: HeightMapTexture,
+  // displacementScale: 0.05,
   //aoMap: AmbientOccultionTexture
 });
 
