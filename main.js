@@ -81,11 +81,15 @@ const animate = () => {
   renderer.render(scene, camera);
 }
 
-function onWindowResize() {
+const onWindowResize = () => {
 
   camera.aspect = window.innerWidth / window.innerHeight;
   camera.updateProjectionMatrix();
   renderer.setSize( window.innerWidth, window.innerHeight );
+}
+
+window.onbeforeunload = () => {
+  window.scrollTo(0, 0);
 }
 
 window.addEventListener( 'resize', onWindowResize );
