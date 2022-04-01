@@ -55,7 +55,7 @@ section {
   width: 60%;
   padding: 20px;
   margin: 200px auto;
-  background-image: linear-gradient(rgba(167, 98, 245, 0.652), rgba(18, 240, 155, 0.652));
+  background-image: linear-gradient(rgba(18, 240, 155, 0.652), rgba(167, 98, 245, 0.652));
   box-shadow:
     3px 3px 0 #000,
   -1px -1px 0 #000,
