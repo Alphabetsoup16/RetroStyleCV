@@ -63,3 +63,8 @@ section {
   -1px 1px 0 #000,
     1px 1px 0 #000;
 }
+
+#skill ul li{
+  display: inline;
+  list-style-type:none;
+}
