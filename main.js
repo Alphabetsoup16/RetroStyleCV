@@ -4,7 +4,7 @@ import * as THREE from 'three';
 const scene = new THREE.Scene();
 scene.background = new THREE.Color(0x87CEEB);
 
-const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.5, 1000)
+const camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 0.5, 1000)
 camera.position.setZ(20);
 
 const renderer = new THREE.WebGLRenderer({canvas: document.querySelector('#canvas')});
