@@ -53,17 +53,26 @@ Array(55).fill().map(() => buildMeshWithRandomPositionAndRotation(new THREE.Dode
 
 
 const textureLoader = new THREE.TextureLoader();
-const normalTexture = textureLoader.load('/normal-map.png');
-const texturedWhite = new THREE.MeshStandardMaterial({
-  color: 0xFFFFFF,
-  metalness: 0.7,
-  roughness: 0.2,
+const normalTexture = textureLoader.load('/WeaveSteel_NormalMap.png');
+const BaseColorTexture = textureLoader.load('/WeaveSteel_Color.png');
+const RoughnessTexture = textureLoader.load('/WeaveSteel_Roughness.png');
+const HeightMapTexture = textureLoader.load('/WeaveSteel_HeightMap.png');
+const AmbientOccultionTexture = textureLoader.load('/WeaveSteel_AmbientOccultion.png');
+const MetallicTexture = textureLoader.load('/WeaveSteel_Metallic.png');
+const texturedSphere = new THREE.MeshStandardMaterial({
+  map: BaseColorTexture,
+  metalness: 0.1,
+  roughnessMap: RoughnessTexture,
+  roughness: 0.5,
   normalMap: normalTexture,
-  emissive: 0x9152CC
+  displacementMap: HeightMapTexture,
+  displacementScale: 0.05,
+  aoMap: AmbientOccultionTexture
 });
 
 const centralSphereGeometry = new THREE.SphereGeometry(4, 64, 64);
-const centralSphere = new THREE.Mesh(centralSphereGeometry, texturedWhite);
+const centralSphere = new THREE.Mesh(centralSphereGeometry, texturedSphere);
+centralSphere.geometry.attributes.uv2 = centralSphere.geometry.attributes.uv
 scene.add(centralSphere);
 
 const animateMeshes = [centralSphere, rhombus, rhombus2]
