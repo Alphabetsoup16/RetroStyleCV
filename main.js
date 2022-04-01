@@ -11,10 +11,10 @@ const renderer = new THREE.WebGLRenderer({canvas: document.querySelector('#canva
 renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize(window.innerWidth, window.innerHeight);
 
-const pointLight1 = new THREE.PointLight(0xBF40BF, 5);
+const pointLight1 = new THREE.PointLight(0xBF40BF);
 pointLight1.position.set(5, -28.5, 5);
 
-const pointLight2 = new THREE.PointLight(0x00ffff, 5);
+const pointLight2 = new THREE.PointLight(0xF5FF65);
 pointLight2.position.set(5, 5, 5);
 
 scene.add(pointLight1, pointLight2);
