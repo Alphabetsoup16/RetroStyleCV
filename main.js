@@ -54,7 +54,7 @@ Array(55).fill().map(() => buildMeshWithRandomPositionAndRotation(new THREE.Dode
 
 const textureLoader = new THREE.TextureLoader();
 const normalTexture = textureLoader.load('/WeaveSteel_NormalMap.jpg');
-const BaseColorTexture = textureLoader.load('/WeaveSteel_BaseSphere.jpg');
+const BaseColorTexture = textureLoader.load('/WeaveSteel_Color.jpg');
 const RoughnessTexture = textureLoader.load('/WeaveSteel_Roughness.jpg');
 const HeightMapTexture = textureLoader.load('/WeaveSteel_HeightMap.jpg');
 const AmbientOccultionTexture = textureLoader.load('/WeaveSteel_AmbientOccultion.jpg');
