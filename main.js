@@ -67,7 +67,7 @@ const texturedSphere = new THREE.MeshStandardMaterial({
   normalMap: normalTexture,
   displacementMap: HeightMapTexture,
   displacementScale: 0.05,
-  aoMap: AmbientOccultionTexture
+  //aoMap: AmbientOccultionTexture
 });
 
 const centralSphereGeometry = new THREE.SphereGeometry(4, 64, 64);
