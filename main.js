@@ -67,12 +67,12 @@ const texturedSphere = new THREE.MeshStandardMaterial({
   normalMap: normalTexture,
   displacementMap: HeightMapTexture,
   displacementScale: 0.05,
-  //aoMap: AmbientOccultionTexture
+  aoMap: AmbientOccultionTexture
 });
 
 const centralSphereGeometry = new THREE.SphereGeometry(4, 64, 64);
 const centralSphere = new THREE.Mesh(centralSphereGeometry, texturedSphere);
-//centralSphere.geometry.attributes.uv2 = centralSphere.geometry.attributes.uv
+centralSphere.geometry.attributes.uv2 = centralSphere.geometry.attributes.uv
 scene.add(centralSphere);
 
 const animateMeshes = [centralSphere, rhombus, rhombus2]
