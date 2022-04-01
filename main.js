@@ -2,7 +2,7 @@ import './style.css';
 import * as THREE from 'three';
 
 const scene = new THREE.Scene();
-scene.background = new THREE.Color(0xf4fbd3);
+scene.background = new THREE.Color(0x87CEEB);
 
 const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.5, 1000)
 camera.position.setZ(20);
