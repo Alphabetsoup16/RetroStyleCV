@@ -53,21 +53,21 @@ Array(55).fill().map(() => buildMeshWithRandomPositionAndRotation(new THREE.Dode
 
 
 const textureLoader = new THREE.TextureLoader();
-const normalTexture = textureLoader.load('/WeaveSteel_NormalMap.png');
-const BaseColorTexture = textureLoader.load('/WeaveSteel_BaseSphere.png');
-const RoughnessTexture = textureLoader.load('/WeaveSteel_Roughness.png');
-const HeightMapTexture = textureLoader.load('/WeaveSteel_HeightMap.png');
-const AmbientOccultionTexture = textureLoader.load('/WeaveSteel_AmbientOccultion.png');
-const MetallicTexture = textureLoader.load('/WeaveSteel_Metallic.png');
+const normalTexture = textureLoader.load('/WeaveSteel_NormalMap.jpg');
+const BaseColorTexture = textureLoader.load('/WeaveSteel_BaseSphere.jpg');
+const RoughnessTexture = textureLoader.load('/WeaveSteel_Roughness.jpg');
+const HeightMapTexture = textureLoader.load('/WeaveSteel_HeightMap.jpg');
+const AmbientOccultionTexture = textureLoader.load('/WeaveSteel_AmbientOccultion.jpg');
+const MetallicTexture = textureLoader.load('/WeaveSteel_Metallic.jpg');
 const texturedSphere = new THREE.MeshStandardMaterial({
   map: BaseColorTexture,
-  // metalness: 0.1,
-  // roughnessMap: RoughnessTexture,
-  // roughness: 0.5,
-  // normalMap: normalTexture,
-  // displacementMap: HeightMapTexture,
-  // displacementScale: 0.05,
-  //aoMap: AmbientOccultionTexture
+  metalness: 0.1,
+  roughnessMap: RoughnessTexture,
+  roughness: 0.5,
+  normalMap: normalTexture,
+  displacementMap: HeightMapTexture,
+  displacementScale: 0.05,
+  aoMap: AmbientOccultionTexture
 });
 
 const centralSphereGeometry = new THREE.SphereGeometry(4, 64, 64);
