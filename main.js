@@ -12,7 +12,7 @@ renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize(window.innerWidth, window.innerHeight);
 
 const pointLight1 = new THREE.PointLight(0xBF40BF);
-pointLight1.position.set(5, -28.5, 5);
+pointLight1.position.set(5, -30, 5);
 
 const pointLight2 = new THREE.PointLight(0x12f09b);
 pointLight2.position.set(5, 5, 5);
@@ -58,7 +58,6 @@ const BaseColorTexture = textureLoader.load('/WeaveSteel_Color.jpg');
 const RoughnessTexture = textureLoader.load('/WeaveSteel_Roughness.jpg');
 const HeightMapTexture = textureLoader.load('/WeaveSteel_HeightMap.jpg');
 const AmbientOccultionTexture = textureLoader.load('/WeaveSteel_AmbientOccultion.jpg');
-const MetallicTexture = textureLoader.load('/WeaveSteel_Metallic.jpg');
 const texturedSphere = new THREE.MeshStandardMaterial({
   map: BaseColorTexture,
   metalness: 0.1,
@@ -88,6 +87,7 @@ function onWindowResize() {
   camera.updateProjectionMatrix();
   renderer.setSize( window.innerWidth, window.innerHeight );
 }
+
 window.addEventListener( 'resize', onWindowResize );
 animate();
 
